@@ -23,14 +23,14 @@ export class BinaryTree {
             }
 
             let x = Number(await io.ask(`Value of the left child of ${pointer.data}: (-1 for no child) `));
-            if(x !== -1){
+            if(x !== -1 || x === null || x === undefined){
                 const tempPointer = new TreeNode(x);
                 pointer.lchild = tempPointer;
                 q.enqueue(tempPointer);
             }
 
             x = Number(await io.ask(`Value of the right child of ${pointer.data}: (-1 for no child) `));
-            if(x !== -1){
+            if(x !== -1 || x === null || x === undefined){
                 const tempPointer = new TreeNode(x);
                 pointer.rchild = tempPointer;
                 q.enqueue(tempPointer);
