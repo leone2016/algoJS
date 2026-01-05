@@ -1,5 +1,5 @@
 //without recursion
-function countDownIterative(n) {
+function countDownIterative(n: number) {
     for (let i = n; i >= 0; i--) {
         console.log(i);
     }
@@ -7,7 +7,7 @@ function countDownIterative(n) {
 countDownIterative(5);
 
 console.log("\nUsing Recursion:\n");
-function countDownRecursive(n) {
+function countDownRecursive(n: number) {
     if (n < 0) return;
     console.log(n);
     countDownRecursive(n - 1);
