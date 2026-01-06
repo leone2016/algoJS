@@ -70,4 +70,32 @@ export class BinaryTree {
         return out;
     }
 
+    inOrder(): number[]{
+        if(!this.root) return [];
+        const out: number[] = [];
+        const q: TreeNode[] = [this.root];
+        while(q.length > 0){
+            const pointer = q.shift();
+            if(!pointer) break;
+            out.push(pointer.data);
+            if(pointer.lchild) q.push(pointer.lchild);
+            if(pointer.rchild) q.push(pointer.rchild);
+        }
+        return out;
+    }
+
+    postOrder(): number[]{
+        if(!this.root) return [];
+        const out: number[] = [];
+        const q: TreeNode[] = [this.root];
+        while(q.length > 0){
+            const pointer = q.shift();
+            if(!pointer) break;
+            out.push(pointer.data);
+            if(pointer.lchild) q.push(pointer.lchild);
+            if(pointer.rchild) q.push(pointer.rchild);
+        }
+        return out;
+    }
+
 }
