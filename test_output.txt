@@ -1,0 +1,8 @@
+Height: 3
+Recursive Pre: [10,20,40,50,30]
+Iterative Pre: [10,20,40,50,30]
+Recursive In: [40,20,50,10,30]
+Iterative In: [40,20,50,10,30]
+Recursive Post: [40,50,20,30,10]
+Iterative Post: [40,50,20,30,10]
+Level Order: [10,20,30,40,50]
