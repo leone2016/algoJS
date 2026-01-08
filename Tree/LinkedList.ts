@@ -22,7 +22,7 @@ export class LinkedList<T>{
 
     addLast(value: T){
         const newNode = new ListNode<T>(value);
-       if(!this.tail){
+       if(!this.tail){ // lista vacia
         this.head = this.tail = newNode;
         return;
        }

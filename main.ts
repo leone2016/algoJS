@@ -1,13 +1,22 @@
-import { BinaryTree } from "./Tree/BinaryTree";
-import MakeConsoleIO from "./util/MakeConsoleIO";
+import { BinarySearchTree } from "./Tree/BinarySearchTree";
+import { TreeNode } from "./Tree/TreeNode";
+import * as fs from 'fs';
 
+const tree = new BinarySearchTree();
 async function main() {
-  const io = MakeConsoleIO();
-  const tree = new BinaryTree();
-  await tree.create({ ask: io.ask });
-  io.close();
-  console.log("\nLevel-order traversal:");
-  console.log(tree.levelOrder().join(" "));
+  // Construct:
+  //     10
+  //    /  \
+  //   5   20
+  //  / \   \
+  // 4   8   50
+  tree.insert(10);
+  tree.insert(5);
+  tree.insert(20);
+  tree.insert(4);
+  tree.insert(8);
+  tree.insert(50);
+  tree.inOrder(tree.root);
 }
 
 main().catch((err) => {
