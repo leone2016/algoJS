@@ -17,6 +17,7 @@ async function main() {
   tree.insert(8);
   tree.insert(50);
   tree.inOrder(tree.root);
+  console.log(tree.search(8));
 }
 
 main().catch((err) => {

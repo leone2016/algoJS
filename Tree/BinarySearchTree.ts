@@ -39,4 +39,23 @@ export class BinarySearchTree {
             this.inOrder(p.rchild);
         }
     }
+
+    /**
+     * Iterative search
+     * @param key Integer value to search
+     * @returns TreeNode if found, null otherwise
+     */
+    search(key: number){
+        let t = this.root;
+        while(t){
+            if(key==t.data)
+                return t;
+            if(key<t.data)
+                t=t.lchild;
+            else if(key>t.data)
+                t=t.rchild;
+            
+        }
+        return null;
+    }
 }
