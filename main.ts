@@ -10,6 +10,11 @@ async function main() {
 
 
     console.log(heap.getHeap());
+    console.log(":: Delete value: ", heap.delete())
+    console.log(heap.getHeap())
+    console.log(":: Delete value: ", heap.delete())
+
+
 }
 
 main().catch((err) => {
