@@ -1,20 +1,28 @@
-import { MaxHeap } from "./Heap/MaxHeap";
-import * as fs from 'fs';
+import { BFS } from "./Graphs/BFS";
 
-const heap = new MaxHeap();
 async function main() {
-    let h  = [0,10,20,30,25,5,40,35]
-    h.forEach((element:number) => {
-        heap.insert(element);
-    });
-
-
-    console.log(heap.getHeap());
-    console.log(":: Delete value: ", heap.delete())
-    console.log(heap.getHeap())
-    console.log(":: Delete value: ", heap.delete())
-
-
+  // graph 
+  // create adjancecy matrix
+  //      1
+  //     /  \
+  //    2   3
+  //     \ / 
+  //      4
+  //     / \
+  //    5   6
+   //0, 1, 2, 3, 4, 5, 6
+  const graph = [
+    [0, 0, 0, 0, 0, 0, 0], //0
+    [0, 0, 1, 1, 0, 0, 0], //1
+    [0, 1, 0, 0, 1, 0, 0], //2
+    [0, 1, 0, 0, 1, 0, 0], //3
+    [0, 0, 1, 1, 0, 1, 1], //4
+    [0, 0, 0, 0, 1, 0, 0], //5
+    [0, 0, 0, 0, 1, 0, 0]  //6
+  ]
+  console.log(graph);
+  const bfs = new BFS(1, 7);
+  bfs.print(graph);
 }
 
 main().catch((err) => {
