@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node main.ts",
+    "leet": "ts-node main_leetCode.ts",
     "build": "tsc"
   },
   "keywords": [],
