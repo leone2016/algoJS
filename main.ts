@@ -1,4 +1,5 @@
 import { BFS } from "./Graphs/BFS";
+import DFS from "./Graphs/DFS";
 
 async function main() {
   // graph 
@@ -23,6 +24,9 @@ async function main() {
   console.log(graph);
   const bfs = new BFS(1, 7);
   bfs.print(graph);
+  console.log("DFS");
+  const dfs = new DFS();
+  dfs.print(graph, 1, 7); // graph, start vertex, length of the matrix
 }
 
 main().catch((err) => {
