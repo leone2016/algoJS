@@ -17,6 +17,9 @@ Constraints:
 s consist of only digits and English letters.
 **/
 /**
+ * 
+ *  Manacher's Algorithm (Avanzado)
+ * 
  * @param {string} s
  * @return {string}
  */
