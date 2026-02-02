@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node main.ts",
+    "dsa": "ts-node main.ts",
+    "stream": "ts-node ./streams/main.ts",
     "leet": "ts-node main_leetCode.ts",
     "build": "tsc"
   },

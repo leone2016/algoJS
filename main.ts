@@ -21,12 +21,13 @@ async function main() {
     [0, 0, 0, 0, 1, 0, 0], //5
     [0, 0, 0, 0, 1, 0, 0]  //6
   ]
-  console.log(graph);
-  const bfs = new BFS(1, 7);
+  //console.log(graph);
+  console.log("BFS");
+  const bfs = new BFS(4, 7);
   bfs.print(graph);
   console.log("DFS");
-  const dfs = new DFS();
-  dfs.print(graph, 1, 7); // graph, start vertex, length of the matrix
+  const dfs = new DFS( 1, 7);
+  dfs.print(graph); // graph, start vertex, length of the matrix
 }
 
 main().catch((err) => {
